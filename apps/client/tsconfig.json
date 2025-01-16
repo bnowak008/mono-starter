@@ -1,0 +1,17 @@
+{
+  "extends": "./tsconfig.app.json",
+  "compilerOptions": {
+    "composite": true,
+    "paths": {
+      "@/*": ["./src/*"],
+      "@mono/server/*": ["../server/src/*"],
+      "@mono/client/*": ["./src/*"]
+    },
+    "baseUrl": ".",
+    "types": ["node"]
+  },
+  "include": ["src/**/*"],
+  "references": [
+    { "path": "../server" }
+  ]
+}
