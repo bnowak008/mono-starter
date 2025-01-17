@@ -1,4 +1,4 @@
-# rup
+# mono
 
 To install dependencies:
 
