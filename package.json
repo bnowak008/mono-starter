@@ -3,13 +3,19 @@
   "version": "0.0.1",
   "type": "module",
   "scripts": {
-    "client": "cd ./apps/client && bun run dev",
-    "server": "cd ./apps/server && bun run dev",
-    "mobile": "cd ./apps/mobile && bun run dev",
+    "dev": "bun run packages/brain/src/cli/dev.ts",
+
     "web": "run-p client server",
+    "mobile": "run-p mobile",
+    "full": "run-p client server mobile",
+
     "db:generate": "cd ./apps/server && bun run db:generate",
     "db:migrate": "cd ./apps/server && bun run db:migrate",
-    "db:studio": "cd ./apps/server && bun run db:studio"
+    "db:studio": "cd ./apps/server && bun run db:studio",
+
+    "brain:db:generate": "cd ./packages/brain && bun run db:generate",
+    "brain:db:migrate": "cd ./packages/brain && bun run db:migrate",
+    "brain:db:studio": "cd ./packages/brain && bun run db:studio"
   },
   "devDependencies": {
     "@types/bun": "latest",

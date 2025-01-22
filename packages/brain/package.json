@@ -1,0 +1,26 @@
+{
+  "name": "@mono/cursor-rules",
+  "version": "0.0.1",
+  "type": "module",
+  "scripts": {
+    "dev": "bun run src/index.ts",
+    "build": "bun build src/index.ts --outdir dist",
+    "db:generate": "bunx drizzle-kit generate",
+    "db:migrate": "bunx drizzle-kit migrate",
+    "db:studio": "bunx drizzle-kit studio"
+  },
+  "dependencies": {
+    "@clack/prompts": "^0.7.0",
+    "chokidar": "^3.5.3",
+    "drizzle-orm": "^0.38.4",
+    "drizzle-zod": "^0.5.1",
+    "nanoid": "^5.0.1",
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "drizzle-kit": "^0.30.0",
+    "bun-types": "latest",
+    "@types/node": "^20.8.4",
+    "@types/bun": "latest"
+  }
+}
