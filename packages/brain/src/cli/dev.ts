@@ -3,6 +3,14 @@ import { execSync } from 'child_process'
 import { createFileWatcher } from '../services/fileWatcher'
 
 async function main() {
+  try {
+    execSync('bun run brain:db:generate', { stdio: 'inherit' })
+    execSync('bun run brain:db:migrate', { stdio: 'inherit' })
+  } catch (error) {
+    console.error('Failed to generate database schema:', error)
+    process.exit(1)
+  }
+
   const mode = await select({
     message: 'Select development mode:',
     options: [

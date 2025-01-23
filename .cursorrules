@@ -1,0 +1,18 @@
+Project: QR Code Campaign Management App Development
+
+Objective: Assist in developing a standalone mono repo that has built in functionality to help to provide a better experience for developers to build and ship software. It will work specifically with cursor ai ide. The goal is to provide better more accurate context to cursor ai ide to help it make better suggestions and recommendations. We are attempting to do this by building a "living brain" that can be used to provide context to cursor ai ide. 
+
+Tech Stack:
+
+    Backend: Bun, hono, tRPC, drizzle, zod, lucia auth, turso
+    Frontend: Bun, Vite, React, Tailwind CSS, Radix-UI/ShadCN, Zustand, React Query (with tRPC)
+
+Development Notes:
+
+    Ensure secure and efficient API communication via tRPC.
+    Follow best practices for Zod validation.
+    Design the system to handle high traffic for QR scans.
+
+Deliverables:
+    Always use functions over classes.
+    Always use types over interfaces.

@@ -5,9 +5,13 @@
   "scripts": {
     "dev": "bun run packages/brain/src/cli/dev.ts",
 
-    "web": "run-p client server",
-    "mobile": "run-p mobile",
-    "full": "run-p client server mobile",
+    "_client": "cd ./apps/client && bun run dev",
+    "_server": "cd ./apps/server && bun run dev",
+    "_mobile": "cd ./apps/mobile && bun run dev",
+
+    "web": "run-p _server _client",
+    "mobile": "run-p _server _mobile",
+    "full": "run-p _server _client _mobile",
 
     "db:generate": "cd ./apps/server && bun run db:generate",
     "db:migrate": "cd ./apps/server && bun run db:migrate",
